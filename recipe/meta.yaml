@@ -1,4 +1,4 @@
-{% set version = "3.3.7" %}
+{% set version = "3.3.8" %}
 
 package:
   name: orange3
@@ -7,7 +7,7 @@ package:
 source:
   fn: Orange3-{{ version }}.tar.gz
   url: https://github.com/biolab/orange3/archive/{{ version }}.tar.gz
-  md5: 86a6b174b6ad5aece609f789998f3098
+  md5: ef96a766392617d976745a2ca4856a8b
 
 build:
   number: 0
