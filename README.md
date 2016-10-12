@@ -16,23 +16,24 @@ Interactive workflows with a large toolbox.
 Installing orange3
 ==================
 
-Installing orange3 from the conda-forge channel can be achieved by adding conda-forge to your channels with:
+Installing `orange3` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
 
 ```
 conda config --add channels conda-forge
 ```
 
-Once the conda-forge channel has been enabled, orange3 can be installed with:
+Once the `conda-forge` channel has been enabled, `orange3` can be installed with:
 
 ```
 conda install orange3
 ```
 
-It is possible to list all of the versions of orange3 available on your platform with:
+It is possible to list all of the versions of `orange3` available on your platform with:
 
 ```
 conda search orange3 --channel conda-forge
 ```
+
 
 
 About conda-forge
@@ -53,8 +54,8 @@ packages to the [conda-forge](https://anaconda.org/conda-forge)
 
 To manage the continuous integration and simplify feedstock maintenance
 [conda-smithy](http://github.com/conda-forge/conda-smithy) has been developed.
-Using the ``conda-forge.yml`` within this repository, it is possible to regenerate all of
-this feedstock's supporting files (e.g. the CI configuration files) with ``conda smithy regenerate``.
+Using the ``conda-forge.yml`` within this repository, it is possible to re-render all of
+this feedstock's supporting files (e.g. the CI configuration files) with ``conda smithy rerender``.
 
 
 Terminology
@@ -72,7 +73,7 @@ Terminology
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/orange3-feedstock.svg?style=svg)](https://circleci.com/gh/conda-forge/orange3-feedstock)
+Linux: [![Circle CI](https://circleci.com/gh/conda-forge/orange3-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/orange3-feedstock)
 OSX: [![TravisCI](https://travis-ci.org/conda-forge/orange3-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/orange3-feedstock)
 Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/orange3-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/orange3-feedstock/branch/master)
 
@@ -85,12 +86,17 @@ Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/orange3/ba
 Updating orange3-feedstock
 ==========================
 
-If you would like to improve the orange3 recipe, please take the normal
-route of forking this repository and submitting a PR. Upon submission, your changes will
-be run on the appropriate platforms to give the reviewer an opportunity to confirm that the
-changes result in a successful build. Once merged, the recipe will be re-built and uploaded
-automatically to the conda-forge channel, whereupon they will be available for everybody to
-install and use.
+If you would like to improve the orange3 recipe or build a new
+package version, please fork this repository and submit a PR. Upon submission,
+your changes will be run on the appropriate platforms to give the reviewer an
+opportunity to confirm that the changes result in a successful build. Once
+merged, the recipe will be re-built and uploaded automatically to the
+`conda-forge` channel, whereupon the built conda packages will be available for
+everybody to install and use from the `conda-forge` channel.
+Note that all branches in the conda-forge/orange3-feedstock are
+immediately built and any created packages are uploaded, so PRs should be based
+on branches in forks and branches in the main repository should only be used to
+build distinct package versions.
 
 In order to produce a uniquely identifiable distribution:
  * If the version of a package **is not** being increased, please add or increase
