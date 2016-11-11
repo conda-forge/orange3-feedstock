@@ -10,7 +10,7 @@ source:
   md5: ef96a766392617d976745a2ca4856a8b
 
 build:
-  number: 1
+  number: 2
   script:
     - python setup.py install --single-version-externally-managed --record=record.txt
   entry_points:
