@@ -13,6 +13,18 @@ Open source data visualization and data analysis for novice and expert.
 Interactive workflows with a large toolbox.
 
 
+Current build status
+====================
+
+Linux: [![Circle CI](https://circleci.com/gh/conda-forge/orange3-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/orange3-feedstock)
+OSX: [![TravisCI](https://travis-ci.org/conda-forge/orange3-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/orange3-feedstock)
+Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/orange3-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/orange3-feedstock/branch/master)
+
+Current release info
+====================
+Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/orange3/badges/version.svg)](https://anaconda.org/conda-forge/orange3)
+Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/orange3/badges/downloads.svg)](https://anaconda.org/conda-forge/orange3)
+
 Installing orange3
 ==================
 
@@ -68,18 +80,6 @@ Terminology
 
 **conda-forge** - the place where the feedstock and smithy live and work to
                   produce the finished article (built conda distributions)
-
-Current build status
-====================
-
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/orange3-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/orange3-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/orange3-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/orange3-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/orange3-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/orange3-feedstock/branch/master)
-
-Current release info
-====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/orange3/badges/version.svg)](https://anaconda.org/conda-forge/orange3)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/orange3/badges/downloads.svg)](https://anaconda.org/conda-forge/orange3)
 
 
 Updating orange3-feedstock
