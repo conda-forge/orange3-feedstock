@@ -10,7 +10,7 @@ source:
   md5: ef96a766392617d976745a2ca4856a8b
 
 build:
-  number: 3
+  number: 4
   script:
     - python setup.py install --single-version-externally-managed --record=record.txt
   entry_points:
@@ -35,8 +35,8 @@ requirements:
     - chardet       >=2.3.0
     - docutils
     - xlrd          >=0.9.2
-    - pyqt            4.11.*
-    - pyqtgraph
+    - pyqt 4.11.*
+    - pyqt 4.11.*
     - joblib
     - python.app    # [osx]
 
