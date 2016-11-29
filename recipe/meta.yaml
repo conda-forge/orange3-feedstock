@@ -10,13 +10,13 @@ source:
   md5: ef96a766392617d976745a2ca4856a8b
 
 build:
-  number: 3
+  number: 2
   script:
     - python setup.py install --single-version-externally-managed --record=record.txt
   entry_points:
     - orange-canvas = Orange.canvas.__main__:main
   osx_is_app: True
-  skip: True        # [py2k]
+  skip: True        # [py2k or win and np!=111]
 
 requirements:
   build:
