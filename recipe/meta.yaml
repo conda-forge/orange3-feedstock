@@ -35,8 +35,8 @@ requirements:
     - chardet       >=2.3.0
     - docutils
     - xlrd          >=0.9.2
-    - pyqt            4.11.*
-    - pyqtgraph
+    - pyqt 4.11.*
+    - pyqt 4.11.*
     - joblib
     - keyring
     - keyrings.alt
