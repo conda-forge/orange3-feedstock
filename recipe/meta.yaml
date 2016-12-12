@@ -1,4 +1,4 @@
-{% set version = "3.3.8" %}
+{% set version = "3.3.9" %}
 
 package:
   name: orange3
@@ -7,10 +7,12 @@ package:
 source:
   fn: Orange3-{{ version }}.tar.gz
   url: https://github.com/biolab/orange3/archive/{{ version }}.tar.gz
-  md5: ef96a766392617d976745a2ca4856a8b
+  md5: dcc39b94e8d06a28315b4188bbc9b705
+  patches:
+    - requirements.patch # conda does not yet provide scikit-learn 0.18.1
 
 build:
-  number: 4
+  number: 0
   script:
     - python setup.py install --single-version-externally-managed --record=record.txt
   entry_points:
@@ -40,6 +42,8 @@ requirements:
     - joblib
     - keyring
     - keyrings.alt
+    - dill
+    - anyqt
     - python.app    # [osx]
 
 test:
