@@ -1,4 +1,4 @@
-{% set version = "3.3.9" %}
+{% set version = "3.3.10" %}
 
 package:
   name: orange3
@@ -7,7 +7,7 @@ package:
 source:
   fn: Orange3-{{ version }}.tar.gz
   url: https://github.com/biolab/orange3/archive/{{ version }}.tar.gz
-  md5: dcc39b94e8d06a28315b4188bbc9b705
+  sha256: af17f3b0f2052c3f2c578eb19a641e8acd29d318d1d8085fd57fb13c7c321f8f
   patches:
     - requirements.patch # conda does not yet provide scikit-learn 0.18.1
 
@@ -44,8 +44,9 @@ requirements:
     - keyrings.alt
     - dill
     - anyqt
+    - pip
     - python.app    # [osx]
-
+   
 test:
   commands:
     - python -c "import pkg_resources; pkg_resources.require('Orange3')"
