@@ -1,5 +1,5 @@
-{% set version = "3.4.3" %}
-{% set sha256 = "7adb59ddcae681d94de2e7e9aa746d643477579703cdecad66b1bc39aa9c1c7f" %}
+{% set version = "3.4.4" %}
+{% set sha256 = "6e862dd08491abf9158a27227f5198af9f582a78752b53189a80464012bbb8c9" %}
 
 package:
   name: orange3
@@ -77,3 +77,4 @@ extra:
     - lanzagar
     - ales-erjavec
     - nikicc
+    - markotoplak
