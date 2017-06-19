@@ -4,7 +4,7 @@ index 1b809b6..95c2dd7 100644
 +++ b/requirements-core.txt
 @@ -1,6 +1,6 @@
  numpy>=1.9.0
- scipy>=0.11.0
+ scipy>=0.16.1
 -scikit-learn>=0.18.1
 +scikit-learn>=0.18
  bottleneck>=1.0.0
