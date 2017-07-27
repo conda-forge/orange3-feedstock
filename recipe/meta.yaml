@@ -1,5 +1,5 @@
-{% set version = "3.4.4" %}
-{% set sha256 = "6e862dd08491abf9158a27227f5198af9f582a78752b53189a80464012bbb8c9" %}
+{% set version = "3.4.5" %}
+{% set sha256 = "b9a40c20c01ab5f7d01395597e9ac8b6cfd70caa58e4b560c00e91c50a7267f3" %}
 
 package:
   name: orange3
@@ -46,6 +46,7 @@ requirements:
     - dill
     - pip
     - python.app    # [osx]
+    - commonmark    >=0.5.5
    
 test:
   commands:
