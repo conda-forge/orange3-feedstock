@@ -9,8 +9,6 @@ source:
   fn: Orange3-{{ version }}.tar.gz
   url: https://github.com/biolab/orange3/archive/{{ version }}.tar.gz
   sha256: {{ sha256 }}
-  patches:
-    - requirements.patch # conda does not yet provide scikit-learn 0.18.1
 
 build:
   number: 0
@@ -26,14 +24,15 @@ requirements:
     - toolchain
     - python
     - setuptools
-    - numpy x.x
+    - numpy 1.9.*   # [not (win and py36)]
+    - numpy 1.11.*  # [win and py36]
   run:
     - python
-    - setuptools
-    - numpy x.x
-    - numpy         >=1.9.0
+    - setuptools    >=36.3
+    - numpy         >=1.9   # [not (win and py36)]
+    - numpy         >=1.11  # [win and py36]
     - scipy
-    - scikit-learn  >=0.18
+    - scikit-learn  >=0.18.1
     - bottleneck
     - chardet       >=2.3.0
     - docutils
@@ -47,12 +46,12 @@ requirements:
     - pip
     - python.app    # [osx]
     - commonmark    >=0.5.5
+    - serverfiles
    
 test:
   commands:
     - python -c "import pkg_resources; pkg_resources.require('Orange3')"
-    # Linux tests should be reenabled when conda-forge/pyqt-feedstock#19 gets fixed.
-    - orange-canvas --help  # [not linux]
+    - orange-canvas --help
   imports:
     - Orange
 
