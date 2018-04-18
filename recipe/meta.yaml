@@ -1,5 +1,5 @@
-{% set version = "3.11.0" %}
-{% set sha256 = "252e19a1919a4d1c2bbe0b10c7d32324b222fcf82689fae727d616814ec9f42d" %}
+{% set version = "3.13.0" %}
+{% set sha256 = "8329a180fdb5c8d838c1aa04f805cefa204ffe8a662e402432692bf9cffa7879" %}
 
 package:
   name: orange3
@@ -40,7 +40,8 @@ requirements:
     - anyqt
     - pyqtgraph
     - joblib
-    - keyring
+    - keyring               # [not linux]
+    - keyring       <10     # [linux]
     - keyrings.alt
     - dill
     - pip
@@ -78,3 +79,4 @@ extra:
     - ales-erjavec
     - nikicc
     - markotoplak
+    - primozgodec
