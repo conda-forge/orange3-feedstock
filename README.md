@@ -16,14 +16,16 @@ Interactive workflows with a large toolbox.
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/orange3-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/orange3-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/orange3-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/orange3-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/orange3-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/orange3-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/orange3-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/orange3-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/orange3-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/orange3-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/orange3-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/orange3-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/orange3/badges/version.svg)](https://anaconda.org/conda-forge/orange3)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/orange3/badges/downloads.svg)](https://anaconda.org/conda-forge/orange3)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-orange3-green.svg)](https://anaconda.org/conda-forge/orange3) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/orange3.svg)](https://anaconda.org/conda-forge/orange3) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/orange3.svg)](https://anaconda.org/conda-forge/orange3) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/orange3.svg)](https://anaconda.org/conda-forge/orange3) |
 
 Installing orange3
 ==================
