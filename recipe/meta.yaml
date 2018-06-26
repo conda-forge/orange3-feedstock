@@ -21,16 +21,18 @@ build:
 
 requirements:
   build:
-    - toolchain
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+  host:
     - python
     - setuptools
-    - numpy 1.9.*   # [not (win and py36)]
-    - numpy 1.11.*  # [win and py36]
+    - numpy         # [not (win and py36)]
+    - numpy         # [win and py36]
   run:
     - python
     - setuptools    >=36.3
-    - numpy         >=1.9   # [not (win and py36)]
-    - numpy         >=1.11  # [win and py36]
+    - {{ pin_compatible('numpy') }}            # [not (win and py36)]
+    - {{ pin_compatible('numpy') }}           # [win and py36]
     - scipy
     - scikit-learn  >=0.18.1
     - bottleneck
@@ -48,7 +50,7 @@ requirements:
     - python.app    # [osx]
     - commonmark    >=0.5.5
     - serverfiles
-   
+
 test:
   commands:
     - python -c "import pkg_resources; pkg_resources.require('Orange3')"
