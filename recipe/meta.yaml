@@ -12,8 +12,7 @@ source:
 
 build:
   number: 1000
-  script:
-    - python setup.py install --single-version-externally-managed --record=record.txt
+  script: "{{ PYTHON }} -m pip install . -vvv"
   entry_points:
     - orange-canvas = Orange.canvas.__main__:main
   osx_is_app: True
@@ -25,14 +24,13 @@ requirements:
     - {{ compiler('cxx') }}
   host:
     - python
+    - pip
     - setuptools
-    - numpy         # [not (win and py36)]
-    - numpy         # [win and py36]
+    - numpy
   run:
     - python
     - setuptools    >=36.3
-    - {{ pin_compatible('numpy') }}            # [not (win and py36)]
-    - {{ pin_compatible('numpy') }}           # [win and py36]
+    - {{ pin_compatible('numpy') }}
     - scipy
     - scikit-learn  >=0.18.1
     - bottleneck
@@ -67,7 +65,7 @@ app:
   icon: icon_48x48.png
 
 about:
-  home: http://orange.biolab.si/
+  home: http://orange.biolab.si
   license: GPL3
   license_file: LICENSE
   summary: component-based data mining framework
