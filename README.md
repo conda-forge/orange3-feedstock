@@ -1,7 +1,7 @@
 About orange3
 =============
 
-Home: http://orange.biolab.si/
+Home: http://orange.biolab.si
 
 Package license: GPL3
 
