@@ -12,7 +12,7 @@ source:
 
 build:
   number: 1000
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv"
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
   entry_points:
     - orange-canvas = Orange.canvas.__main__:main
   osx_is_app: True
