@@ -16,7 +16,7 @@ build:
   entry_points:
     - orange-canvas = Orange.canvas.__main__:main
   osx_is_app: True
-  skip: True        # [py2k]
+  skip: True  # [py2k]
 
 requirements:
   build:
@@ -28,28 +28,28 @@ requirements:
     - numpy
   run:
     - python
-    - setuptools    >=36.3
+    - setuptools >=36.3
     - {{ pin_compatible('numpy') }}
-    - scipy
-    - scikit-learn  >=0.18.1
-    - bottleneck
-    - chardet       >=2.3.0
+    - scipy >=0.16.1
+    - scikit-learn >=0.20.0
+    - bottleneck >=1.0.0
+    - chardet >=3.0.2
     - docutils
-    - xlrd          >=0.9.2
-    - anyqt
-    - pyqtgraph
-    - joblib
-    - keyring               # [not linux]
-    - keyring       <10     # [linux]
+    - xlrd >=0.9.2
+    - anyqt >=0.0.8
+    - pyqtgraph >=0.10.0
+    - joblib >=0.9.4
+    - keyring  # [not linux]
+    - keyring <10  # [linux]
     - keyrings.alt
     - dill
-    - pip
-    - python.app    # [osx]
-    - commonmark    >=0.5.5
+    - pip >=9.0
+    - python.app  # [osx]
+    - commonmark >=0.5.5
     - serverfiles
     - python-louvain
-    - matplotlib    >=2.0.0
-    - fasttsne
+    - matplotlib >=2.0.0
+    - fasttsne >=0.2.12
 
 test:
   commands:
