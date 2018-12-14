@@ -39,13 +39,10 @@ requirements:
     - anyqt >=0.0.8
     - pyqtgraph >=0.10.0
     - joblib >=0.9.4
-    - keyring  # [not linux]
-    - keyring <10  # [linux]
+    - keyring
     - keyrings.alt
-    - dill
     - pip >=9.0
     - python.app  # [osx]
-    - commonmark >=0.5.5
     - serverfiles
     - python-louvain
     - matplotlib >=2.0.0
