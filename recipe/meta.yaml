@@ -1,5 +1,5 @@
-{% set version = "3.19.0" %}
-{% set sha256 = "9ae6e72fa2ffebe3945d1813439e809fd353ef386fb8cfa10c3cfe3917e03042" %}
+{% set version = "3.20.0" %}
+{% set sha256 = "2fb6f130d745dbb553d85b40686458b56e1c89044caaaa30f7fdaec967151e1a" %}
 
 package:
   name: orange3
@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1000
+  number: 0
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
   entry_points:
     - orange-canvas = Orange.canvas.__main__:main
@@ -36,6 +36,7 @@ requirements:
     - chardet >=3.0.2
     - docutils
     - xlrd >=0.9.2
+    - xlsxwriter
     - anyqt >=0.0.8
     - pyqtgraph >=0.10.0
     - joblib >=0.9.4
@@ -47,7 +48,7 @@ requirements:
     - python-louvain
     - requests
     - matplotlib >=2.0.0
-    - fasttsne >=0.2.12
+    - opentsne >=0.3.0
 
 test:
   commands:
