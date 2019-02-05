@@ -12,7 +12,7 @@ source:
 
 build:
   number: 0
-  script: "{{ PYTHON }} -m pip install --global-option=build --global-option=-j1 . --no-deps -vv"
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
   entry_points:
     - orange-canvas = Orange.canvas.__main__:main
   osx_is_app: True
@@ -26,7 +26,8 @@ requirements:
     - python
     - pip
     - wheel
-    - numpy
+    - numpy   1.13.* # [win]
+    - numpy          # [unix]
   run:
     - python
     - setuptools >=36.3
