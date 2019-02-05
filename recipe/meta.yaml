@@ -26,8 +26,9 @@ requirements:
     - python
     - pip
     - wheel
-    - numpy   1.13.* # [win]
-    - numpy          # [unix]
+    - numpy   1.13.*  # [win and py<=36]
+    - numpy   1.14.*  # [win and py==37]
+    - numpy           # [not win]
   run:
     - python
     - setuptools >=36.3
