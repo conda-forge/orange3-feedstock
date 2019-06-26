@@ -52,6 +52,7 @@ requirements:
     - requests
     - matplotlib >=2.0.0
     - openTSNE >=0.3.0
+    - pandas
 
 test:
   commands:
