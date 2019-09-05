@@ -26,9 +26,7 @@ requirements:
     - python
     - pip
     - wheel
-    - numpy   1.13.*  # [win and py<=36]
-    - numpy   1.14.*  # [win and py==37]
-    - numpy           # [not win]
+    - numpy >=1.16.0
   run:
     - python
     - setuptools >=36.3
@@ -51,8 +49,9 @@ requirements:
     - python-louvain >=0.13
     - requests
     - matplotlib >=2.0.0
-    - openTSNE >=0.3.0
+    - openTSNE >=0.3.11
     - pandas
+    - pyyaml
 
 test:
   commands:
