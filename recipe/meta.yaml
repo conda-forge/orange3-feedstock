@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
   entry_points:
     - orange-canvas = Orange.canvas.__main__:main
@@ -26,11 +26,11 @@ requirements:
     - python
     - pip
     - wheel
-    - numpy >=1.16.0
+    - numpy 1.14
   run:
     - python
     - setuptools >=36.3
-    - {{ pin_compatible('numpy') }}
+    - numpy >=1.16.0
     - scipy >=0.16.1
     - scikit-learn >=0.20.0
     - bottleneck >=1.0.0
