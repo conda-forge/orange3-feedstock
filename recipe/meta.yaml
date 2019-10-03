@@ -1,5 +1,5 @@
-{% set version = "3.23.0" %}
-{% set sha256 = "22d7528f6838140062682498a5bca764011a81556c5bd977441647c4c694a463" %}
+{% set version = "3.23.1" %}
+{% set sha256 = "d77b4525a22762df2eb0de45696fe69e1cd6d573e4ef0de6f9a0d2bc1bcc0802" %}
 
 package:
   name: orange3
@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
   entry_points:
     - orange-canvas = Orange.canvas.__main__:main
