@@ -1,5 +1,5 @@
-{% set version = "3.23.1" %}
-{% set sha256 = "d77b4525a22762df2eb0de45696fe69e1cd6d573e4ef0de6f9a0d2bc1bcc0802" %}
+{% set version = "3.24.0" %}
+{% set sha256 = "3b4fe7d585308a701e9f3d45caf3d7d287f0464d3e30f81a0db572e3f17906cf" %}
 
 package:
   name: orange3
@@ -32,7 +32,7 @@ requirements:
     - setuptools >=36.3
     - numpy >=1.16.0
     - scipy >=0.16.1
-    - scikit-learn >=0.20.0
+    - scikit-learn >=0.22.0
     - bottleneck >=1.0.0
     - chardet >=3.0.2
     - docutils
@@ -52,8 +52,9 @@ requirements:
     - openTSNE >=0.3.11
     - pandas
     - pyyaml
-    - orange-canvas-core >=0.1.7,<0.2a
-    - orange-widget-base >=4.0a,<4.1a
+    - orange-canvas-core >=0.1.9,<0.2a
+    - orange-widget-base >=4.2.0
+    - openpyxl
 
 test:
   commands:
