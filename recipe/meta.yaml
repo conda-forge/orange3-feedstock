@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
   entry_points:
     - orange-canvas = Orange.canvas.__main__:main
@@ -48,7 +48,7 @@ requirements:
     - serverfiles
     - python-louvain >=0.13
     - requests
-    - matplotlib >=2.0.0
+    - matplotlib-base >=2.0.0
     - openTSNE >=0.3.11
     - pandas
     - pyyaml
