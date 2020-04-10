@@ -1,5 +1,5 @@
-{% set version = "3.24.1" %}
-{% set sha256 = "39e0e92d6d9fe75d5ef0ac3ca076b222e10ac60c26998c5686e0c5c3c5a95504" %}
+{% set version = "3.25.0" %}
+{% set sha256 = "ee24bdce6588deb253e9a831588a10748347d2bdb08fe7c285fe3ffce9f25323" %}
 
 package:
   name: orange3
@@ -11,12 +11,12 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  number: 0
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - orange-canvas = Orange.canvas.__main__:main
-  osx_is_app: True
-  skip: True  # [py2k]
+  osx_is_app: true
+  skip: true  # [py2k]
 
 requirements:
   build:
@@ -65,7 +65,7 @@ test:
 
 app:
   entry: orange-canvas
-  summary: 'data visualization and data analysis tool'
+  summary: data visualization and data analysis tool
   icon: icon_48x48.png
 
 about:
