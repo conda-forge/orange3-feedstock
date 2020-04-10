@@ -72,7 +72,7 @@ app:
 
 about:
   home: http://orange.biolab.si
-  license: GPL-3.0
+  license: GPL-3.0-only
   license_file: LICENSE
   summary: component-based data mining framework
   description: |
