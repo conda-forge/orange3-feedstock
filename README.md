@@ -3,7 +3,7 @@ About orange3
 
 Home: http://orange.biolab.si
 
-Package license: GPL-3.0
+Package license: GPL-3.0-only
 
 Feedstock license: BSD 3-Clause
 
