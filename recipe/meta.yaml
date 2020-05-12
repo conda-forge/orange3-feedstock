@@ -61,14 +61,11 @@ requirements:
     - cachecontrol >=0.12.6
 
 test:
-  requires:
-    - pytest
   commands:
     - python -c "import pkg_resources; pkg_resources.require('Orange3')"
     - orange-canvas --help
     - export QT_QPA_PLATFORM=offscreen  # [not win]
-    - pytest --pyargs Orange -v
-#    - python -m unittest -v Orange.tests Orange.widgets.tests
+    - python -m unittest -v Orange.tests Orange.widgets.tests
   imports:
     - Orange
 
