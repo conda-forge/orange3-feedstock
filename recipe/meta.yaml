@@ -61,6 +61,8 @@ requirements:
     - cachecontrol >=0.12.6
 
 test:
+  reqires:
+    - pytest
   commands:
     - python -c "import pkg_resources; pkg_resources.require('Orange3')"
     - orange-canvas --help
