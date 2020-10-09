@@ -59,6 +59,8 @@ requirements:
     - baycomp >=1.0.2
     # cachecontrol (required by canvas core) <0.12.5 is incompatible with msgpack 1.0
     - cachecontrol >=0.12.6
+    # appnope should be in orange-widget-base TODO: add it to next release, or find different solution
+    - appnope  # [osx]
 
 test:
   commands:
