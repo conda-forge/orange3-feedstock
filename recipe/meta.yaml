@@ -1,5 +1,5 @@
-{% set version = "3.26.0" %}
-{% set sha256 = "0814bd19e622816eb37a54ed807c0820c7e6fe543697a2a8a9a5caafe4915db7" %}
+{% set version = "3.27.0" %}
+{% set sha256 = "9b48f8f96acbecd03b0dc180472b5d0b1f3249e7f3dab2a9cc01f0d366947b0b" %}
 
 package:
   name: orange3
@@ -39,7 +39,8 @@ requirements:
     - xlrd >=0.9.2
     - xlsxwriter
     - anyqt >=0.0.8
-    - pyqtgraph =0.10.0
+    - pyqt >=5.12,!=5.15.1
+    - pyqtgraph >=0.11.0
     - joblib >=0.9.4
     - keyring
     - keyrings.alt
@@ -49,16 +50,18 @@ requirements:
     - python-louvain >=0.13
     - requests
     - matplotlib-base >=2.0.0
-    - openTSNE >=0.3.11
+    - openTSNE >=0.4.3
     - pandas
     - pyyaml
-    - orange-canvas-core >=0.1.15,<0.2a
-    - orange-widget-base >=4.6.0
+    - orange-canvas-core >=0.1.16,<0.2a
+    - orange-widget-base >=4.8.1
     - openpyxl
-    - httpx >=0.12
+    - httpx =0.14.*
     - baycomp >=1.0.2
     # cachecontrol (required by canvas core) <0.12.5 is incompatible with msgpack 1.0
     - cachecontrol >=0.12.6
+    # appnope should be in orange-widget-base TODO: add it to next release, or find different solution
+    - appnope  # [osx]
 
 test:
   commands:
