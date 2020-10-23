@@ -1,5 +1,5 @@
-{% set version = "3.27.0" %}
-{% set sha256 = "9b48f8f96acbecd03b0dc180472b5d0b1f3249e7f3dab2a9cc01f0d366947b0b" %}
+{% set version = "3.27.1" %}
+{% set sha256 = "1f2e2a33750d470db699ac4af6f247700ecced507d99731aeb971c88b571c40b" %}
 
 package:
   name: orange3
@@ -88,7 +88,7 @@ about:
 
 extra:
   recipe-maintainers:
-    - astaric 
+    - astaric
     - lanzagar
     - ales-erjavec
     - nikicc
