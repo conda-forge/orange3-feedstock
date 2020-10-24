@@ -26,7 +26,7 @@ requirements:
     - python
     - pip
     - wheel
-    - numpy 1.14
+    - numpy 1.16
   run:
     - python
     - setuptools >=36.3
