@@ -62,8 +62,8 @@ requirements:
     # optional
     # xgboost is optional since user must install libomp (with brew) on macOS for xgboost to work
     # it is not required for xgboost from conda - it is why I am adding a package to the recipe
-    xgboost
-    catboost
+    - xgboost
+    - catboost
     # others
     - pip >=9.0
     - python.app  # [osx]
