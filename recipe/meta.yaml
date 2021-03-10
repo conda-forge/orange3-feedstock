@@ -62,6 +62,8 @@ requirements:
     - cachecontrol >=0.12.6
     # appnope should be in orange-widget-base TODO: add it to next release, or find different solution
     - appnope  # [osx]
+    - xgboost
+    - catboost
 
 test:
   commands:
