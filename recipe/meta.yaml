@@ -59,6 +59,11 @@ requirements:
     - anyqt >=0.0.11
     - pyqtgraph ==0.11.0
     - matplotlib-base >=2.0.0
+    # optional
+    # xgboost is optional since user must install libomp (with brew) on macOS for xgboost to work
+    # it is not required for xgboost from conda - it is why I am adding a package to the recipe
+    xgboost
+    catboost
     # others
     - pip >=9.0
     - python.app  # [osx]
