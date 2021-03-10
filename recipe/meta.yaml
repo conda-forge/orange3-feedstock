@@ -27,6 +27,7 @@ requirements:
     - pip
     - wheel
     - numpy 1.16
+    - cython
   run:
     - python
     # core requirements
