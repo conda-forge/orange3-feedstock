@@ -25,9 +25,12 @@ requirements:
   host:
     - python
     - pip
+    - setuptools
     - wheel
     - numpy 1.16
     - cython
+    - sphinx
+    - recommonmark
   run:
     - python
     # core requirements
