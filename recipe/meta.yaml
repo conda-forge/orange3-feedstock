@@ -1,5 +1,5 @@
-{% set version = "3.27.1" %}
-{% set sha256 = "1f2e2a33750d470db699ac4af6f247700ecced507d99731aeb971c88b571c40b" %}
+{% set version = "3.28.0" %}
+{% set sha256 = "2484904ae1d087c8fac241c8de2607ecdaabfd33637dd56ca9107d5e4e42492a" %}
 
 package:
   name: orange3
@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - orange-canvas = Orange.canvas.__main__:main
@@ -25,39 +25,51 @@ requirements:
   host:
     - python
     - pip
+    - setuptools
     - wheel
     - numpy 1.16
+    - cython
+    - sphinx
+    - recommonmark
   run:
     - python
-    - setuptools >=36.3
+    # core requirements
     - numpy >=1.16.0
     - scipy >=0.16.1
     - scikit-learn >=0.22.0,!=0.23.0
     - bottleneck >=1.0.0
-    - chardet >=3.0.2
-    - docutils
-    - xlrd >=0.9.2,<2.0.0
+    - xlrd >=0.9.2
+    - chardet >=3.0.0
     - xlsxwriter
-    - anyqt >=0.0.11
-    - pyqt >=5.12,!=5.15.1
-    - pyqtgraph ==0.11.0
     - joblib >=0.9.4
     - keyring
     - keyrings.alt
-    - pip >=9.0
-    - python.app  # [osx]
+    - setuptools >=36.3
     - serverfiles
+    - networkx
     - python-louvain >=0.13
     - requests
-    - matplotlib-base >=2.0.0
     - openTSNE >=0.4.3
-    - pandas
-    - pyyaml
-    - orange-canvas-core >=0.1.18,<0.2a
-    - orange-widget-base >=4.8.1
-    - openpyxl
-    - httpx =0.14.*
     - baycomp >=1.0.2
+    - pandas >=1.0.0
+    - pyyaml
+    - openpyxl
+    - httpx >=0.14.0,<0.17
+    # gui requirements
+    - orange-canvas-core >=0.1.19,<0.2a
+    - orange-widget-base >=4.12.0
+    - pyqt >=5.12,!=5.15.1
+    - anyqt >=0.0.11
+    - pyqtgraph ==0.11.0
+    - matplotlib-base >=2.0.0
+    # optional
+    # xgboost is optional since user must install libomp (with brew) on macOS for xgboost to work
+    # it is not required for xgboost from conda - it is why I am adding a package to the recipe
+    - xgboost
+    - catboost
+    # others
+    - pip >=9.0
+    - python.app  # [osx]
     # cachecontrol (required by canvas core) <0.12.5 is incompatible with msgpack 1.0
     - cachecontrol >=0.12.6
     # appnope should be in orange-widget-base TODO: add it to next release, or find different solution
