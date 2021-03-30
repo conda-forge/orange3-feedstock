@@ -1,95 +1,95 @@
+{% set name = "Orange3" %}
 {% set version = "3.28.0" %}
-{% set sha256 = "2484904ae1d087c8fac241c8de2607ecdaabfd33637dd56ca9107d5e4e42492a" %}
+
 
 package:
-  name: orange3
+  name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: Orange3-{{ version }}.tar.gz
-  url: https://github.com/biolab/orange3/archive/{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/Orange3-{{ version }}.tar.gz
+  sha256: 34fe65e3d569b23aef948996f0ec2e74423c7e801fcc432108df803ea5ec84a9
 
 build:
-  number: 1
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  number: 0
   entry_points:
     - orange-canvas = Orange.canvas.__main__:main
   osx_is_app: true
   skip: true  # [py2k]
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
-    - numpy
   host:
-    - python
+    - cython
+    - numpy
     - pip
     - setuptools
     - wheel
-    - cython
-    - sphinx
-    - recommonmark
-  run:
     - python
-    # core requirements
-    - numpy >=1.16.0
-    - scipy >=0.16.1
-    - scikit-learn >=0.22.0,!=0.23.0
+    - recommonmark
+    - sphinx
+  run:
+    # appnope should be in orange-widget-base TODO: add it to next release, or find different solution
+    - appnope  # [osx]
+    - anyqt >=0.0.11
+    - baycomp >=1.0.2
     - bottleneck >=1.0.0
-    - xlrd >=0.9.2
-    - chardet >=3.0.0
-    - xlsxwriter
+    - chardet >=3.0.2
+    - httpx >=0.14.0,<0.17
     - joblib >=0.9.4
     - keyring
     - keyrings.alt
-    - setuptools >=36.3
-    - serverfiles
+    - matplotlib-base >=2.0.0
     - networkx
-    - python-louvain >=0.13
-    - requests
-    - openTSNE >=0.4.3
-    - baycomp >=1.0.2
-    - pandas >=1.0.0
-    - pyyaml
+    - numpy >=1.16.0
     - openpyxl
-    - httpx >=0.14.0,<0.17
-    # gui requirements
+    - opentsne >=0.4.3
     - orange-canvas-core >=0.1.19,<0.2a
     - orange-widget-base >=4.12.0
+    - pandas >=1.0.0
+    - pip >=9.0
     - pyqt >=5.12,!=5.15.1
-    - anyqt >=0.0.11
-    - pyqtgraph ==0.11.0
-    - matplotlib-base >=2.0.0
-    # optional
+    - pyqtgraph >=0.11.0
+    - pyqtwebengine >=5.12
+    - python
+    - python-louvain >=0.13
+    - pyyaml
+    - requests
+    - scikit-learn >=0.22.0,!=0.23.0
+    - scipy >=0.16.1
+    - serverfiles
+    - setuptools >=36.3
+    - typing  # [py<=34]
     # xgboost is optional since user must install libomp (with brew) on macOS for xgboost to work
     # it is not required for xgboost from conda - it is why I am adding a package to the recipe
     - xgboost
     - catboost
-    # others
-    - pip >=9.0
-    - python.app  # [osx]
-    # cachecontrol (required by canvas core) <0.12.5 is incompatible with msgpack 1.0
-    - cachecontrol >=0.12.6
-    # appnope should be in orange-widget-base TODO: add it to next release, or find different solution
-    - appnope  # [osx]
+    - xlrd >=0.9.2
+    - xlsxwriter
+    - {{ pin_compatible('numpy') }}
 
 test:
-  commands:
-    - python -c "import pkg_resources; pkg_resources.require('Orange3')"
-    - orange-canvas --help
   imports:
     - Orange
+    - Orange.canvas
+  commands:
+    - pip check
+    - python -c "import pkg_resources; pkg_resources.require('Orange3')"
+    - orange-canvas --help
+  requires:
+    - pip
 
 app:
   entry: orange-canvas
   summary: data visualization and data analysis tool
   icon: icon_48x48.png
-
 about:
-  home: http://orange.biolab.si
-  license: GPL-3.0-only
+  home: http://orange.biolab.si/
+  summary: Orange, a component-based data mining framework.
+  license: GPL-3.0-or-later
   license_file: LICENSE
   summary: component-based data mining framework
   description: |
