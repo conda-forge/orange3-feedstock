@@ -22,12 +22,12 @@ requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
+    - numpy
   host:
     - python
     - pip
     - setuptools
     - wheel
-    - numpy 1.16
     - cython
     - sphinx
     - recommonmark
