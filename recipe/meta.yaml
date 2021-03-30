@@ -76,13 +76,10 @@ test:
     - Orange
     - Orange.canvas
   commands:
-    - pip check
     - python -c "import pkg_resources; pkg_resources.require('Orange3')"
     - orange-canvas --help
   requires:
     - pip
-    - graphviz
-    - plotly
 
 app:
   entry: orange-canvas
