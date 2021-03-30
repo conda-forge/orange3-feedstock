@@ -81,6 +81,8 @@ test:
     - orange-canvas --help
   requires:
     - pip
+    - graphviz
+    - plotly
 
 app:
   entry: orange-canvas
