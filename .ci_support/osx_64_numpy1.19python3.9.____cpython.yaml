@@ -12,15 +12,11 @@ cxx_compiler:
 - clangxx
 cxx_compiler_version:
 - '11'
-graphviz:
-- '2.40'
 macos_machine:
 - x86_64-apple-darwin13.4.0
 numpy:
 - '1.19'
 pin_run_as_build:
-  graphviz:
-    max_pin: x
   python:
     min_pin: x.x
     max_pin: x.x

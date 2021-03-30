@@ -6,13 +6,9 @@ channel_targets:
 - conda-forge main
 cxx_compiler:
 - vs2017
-graphviz:
-- '2.46'
 numpy:
 - '1.17'
 pin_run_as_build:
-  graphviz:
-    max_pin: x
   python:
     min_pin: x.x
     max_pin: x.x
