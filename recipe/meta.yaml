@@ -32,8 +32,6 @@ requirements:
     - recommonmark
     - sphinx
   run:
-    # appnope should be in orange-widget-base TODO: add it to next release, or find different solution
-    - appnope  # [osx]
     - anyqt >=0.0.11
     - baycomp >=1.0.2
     - bottleneck >=1.0.0
