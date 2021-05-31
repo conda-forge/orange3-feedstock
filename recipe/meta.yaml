@@ -1,5 +1,5 @@
 {% set name = "Orange3" %}
-{% set version = "3.28.0" %}
+{% set version = "3.29.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/Orange3-{{ version }}.tar.gz
-  sha256: 34fe65e3d569b23aef948996f0ec2e74423c7e801fcc432108df803ea5ec84a9
+  sha256: 224298cc5ea3b16b2aeb7addf156e259309b33a4d76f5cacf24475092dd5c861
 
 build:
   number: 0
@@ -32,7 +32,7 @@ requirements:
     - recommonmark
     - sphinx
   run:
-    # appnope should be in orange-widget-base TODO: add it to next release, or find different solution
+    # appnope should be in orange-widget-base
     - appnope  # [osx]
     - anyqt >=0.0.11
     - baycomp >=1.0.2
@@ -46,13 +46,13 @@ requirements:
     - networkx
     - numpy >=1.16.0
     - openpyxl
-    - opentsne >=0.4.3
+    - opentsne >=0.6.0
     - orange-canvas-core >=0.1.19,<0.2a
     - orange-widget-base >=4.12.0
     - pandas >=1.0.0
     - pip >=9.0
     - pyqt >=5.12,!=5.15.1
-    - pyqtgraph >=0.11.0
+    - pyqtgraph >=0.11.1
     - pyqtwebengine >=5.12
     - python
     - python-louvain >=0.13
@@ -62,7 +62,6 @@ requirements:
     - scipy >=0.16.1
     - serverfiles
     - setuptools >=36.3
-    - typing  # [py<=34]
     # xgboost is optional since user must install libomp (with brew) on macOS for xgboost to work
     # it is not required for xgboost from conda - it is why I am adding a package to the recipe
     - xgboost
