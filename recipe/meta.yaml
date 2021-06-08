@@ -1,5 +1,5 @@
 {% set name = "Orange3" %}
-{% set version = "3.29.1" %}
+{% set version = "3.29.2" %}
 
 
 package:
@@ -8,14 +8,13 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/Orange3-{{ version }}.tar.gz
-  sha256: 224298cc5ea3b16b2aeb7addf156e259309b33a4d76f5cacf24475092dd5c861
+  sha256: 77c239bd9d91af825ad3e2d2a1d378dedcae1345ba5428384dc01cc8f6c8a72b
 
 build:
   number: 0
   entry_points:
     - orange-canvas = Orange.canvas.__main__:main
   osx_is_app: true
-  skip: true  # [py2k]
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -47,7 +46,7 @@ requirements:
     - numpy >=1.16.0
     - openpyxl
     - opentsne >=0.6.0
-    - orange-canvas-core >=0.1.19,<0.2a
+    - orange-canvas-core >=0.1.21,<0.2a
     - orange-widget-base >=4.12.0
     - pandas >=1.0.0
     - pip >=9.0
