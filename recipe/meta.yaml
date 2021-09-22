@@ -1,5 +1,5 @@
 {% set name = "Orange3" %}
-{% set version = "3.29.3" %}
+{% set version = "3.30.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/Orange3-{{ version }}.tar.gz
-  sha256: b768879a75b411df3799204e560046cacc5260e4edd27bffbd3ba4eab8a9437d
+  sha256: e134644d5bbe79cc1f43dc1f2a3f8cc0b3a4535cb93e1f1d38752954001bcfd8
 
 build:
   number: 0
@@ -37,7 +37,7 @@ requirements:
     - baycomp >=1.0.2
     - bottleneck >=1.0.0
     - chardet >=3.0.2
-    - httpx >=0.14.0,<0.17
+    - httpx >=0.14.0,<0.20
     - joblib >=0.9.4
     - keyring
     - keyrings.alt
@@ -46,16 +46,18 @@ requirements:
     - numpy >=1.16.0
     - openpyxl
     - opentsne >=0.6.0
-    - orange-canvas-core >=0.1.21,<0.2a
-    - orange-widget-base >=4.12.0
+    - orange-canvas-core >=0.1.22,<0.2a
+    - orange-widget-base >=4.14.0
     - pandas >=1.0.0
     - pip >=9.0
+    - pygments >=2.8.0
     - pyqt >=5.12,!=5.15.1
     - pyqtgraph >=0.11.1
     - pyqtwebengine >=5.12
     - python
     - python-louvain >=0.13
     - pyyaml
+    - qtconsole >=4.7.2
     - requests
     - scikit-learn >=0.22.0,!=0.23.0
     - scipy >=0.16.1
