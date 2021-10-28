@@ -29,7 +29,7 @@ requirements:
     - wheel
     - python
     - recommonmark
-    - sphinx
+    - sphinx >=4.2.0
   run:
     # appnope should be in orange-widget-base
     - appnope  # [osx]
@@ -45,9 +45,9 @@ requirements:
     - networkx
     - numpy >=1.16.0
     - openpyxl
-    - opentsne >=0.6.0
-    - orange-canvas-core >=0.1.22,<0.2a
-    - orange-widget-base >=4.14.0
+    - opentsne >=0.6.1
+    - orange-canvas-core >=0.1.23,<0.2a
+    - orange-widget-base >=4.15.1
     - pandas >=1.0.0
     - pip >=9.0
     - pygments >=2.8.0
@@ -59,14 +59,14 @@ requirements:
     - pyyaml
     - qtconsole >=4.7.2
     - requests
-    - scikit-learn >=0.22.0,!=0.23.0
+    - scikit-learn >=0.22.0,!=0.23.0,!=1.0.0
     - scipy >=0.16.1
     - serverfiles
     - setuptools >=36.3
     # xgboost is optional since user must install libomp (with brew) on macOS for xgboost to work
     # it is not required for xgboost from conda - it is why I am adding a package to the recipe
     - xgboost
-    - catboost  # [not linux and not py39]
+    - catboost !=1.0.0  # [not linux and not py39]
     - xlrd >=0.9.2
     - xlsxwriter
     - {{ pin_compatible('numpy') }}
