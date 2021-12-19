@@ -201,7 +201,6 @@ Feedstock Maintainers
 
 * [@ales-erjavec](https://github.com/ales-erjavec/)
 * [@astaric](https://github.com/astaric/)
-* [@carlodri](https://github.com/carlodri/)
 * [@lanzagar](https://github.com/lanzagar/)
 * [@markotoplak](https://github.com/markotoplak/)
 * [@nikicc](https://github.com/nikicc/)
