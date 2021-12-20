@@ -1,5 +1,5 @@
 {% set name = "Orange3" %}
-{% set version = "3.30.2" %}
+{% set version = "3.31.0" %}
 
 
 package:
@@ -7,8 +7,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/Orange3-{{ version }}.tar.gz
-  sha256: 6caa9888bbbf2a926d3a51418678d8e242ff4383bb7dd948fd690628a9d2eefa
+  url: https://github.com/biolab/orange3/archive/refs/tags/{{ version }}.tar.gz
+  sha256: 6de17dedae4b66e4fa7987675c234574369560491279da9052c95ff6bf2ad646
 
 build:
   number: 0
@@ -46,9 +46,9 @@ requirements:
     - numpy >=1.16.0
     - openpyxl
     - opentsne >=0.6.1
-    - orange-canvas-core >=0.1.23,<0.2a
-    - orange-widget-base >=4.15.1
-    - pandas >=1.0.0
+    - orange-canvas-core >=0.1.24,<0.2a
+    - orange-widget-base >=4.16.1
+    - pandas >=1.1.0
     - pip >=9.0
     - pygments >=2.8.0
     - pyqt >=5.12,!=5.15.1
@@ -99,10 +99,7 @@ about:
 
 extra:
   recipe-maintainers:
-    - astaric
     - lanzagar
     - ales-erjavec
-    - nikicc
     - markotoplak
     - primozgodec
-    - carlodri
