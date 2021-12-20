@@ -7,11 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/biolab/orange3/archive/refs/tags/{{ version }}.tar.gz
-  sha256: 6de17dedae4b66e4fa7987675c234574369560491279da9052c95ff6bf2ad646
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/Orange3-{{ version }}.tar.gz
+  sha256: b3d94c98b0ee3970584c0cd144e6d76d26dc21322181039334ff2536d33eae97
 
 build:
-  number: 1
+  number: 2
   entry_points:
     - orange-canvas = Orange.canvas.__main__:main
   osx_is_app: true
