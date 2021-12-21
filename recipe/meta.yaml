@@ -79,7 +79,8 @@ test:
     - python -c "import pkg_resources; pkg_resources.require('Orange3')"
     - orange-canvas --help
     - export QT_QPA_PLATFORM=offscreen  # [not win]
-    - python -m unittest -v Orange.tests Orange.widgets.tests
+    # for now, only test on Windows (better have some tests than none)
+    - python -m unittest -v Orange.tests Orange.widgets.tests  # [win]
   requires:
     - pip
 
