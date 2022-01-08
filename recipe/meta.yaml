@@ -1,5 +1,5 @@
 {% set name = "Orange3" %}
-{% set version = "3.31.0" %}
+{% set version = "3.31.1" %}
 
 
 package:
@@ -8,10 +8,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/Orange3-{{ version }}.tar.gz
-  sha256: b3d94c98b0ee3970584c0cd144e6d76d26dc21322181039334ff2536d33eae97
+  sha256: c6dee130cc21ba4ce706065fc79f888afa88a2abc69d191bedee696f0df10a4b
 
 build:
-  number: 3
+  number: 0
   entry_points:
     - orange-canvas = Orange.canvas.__main__:main
   osx_is_app: true
