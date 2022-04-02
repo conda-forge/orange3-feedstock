@@ -53,7 +53,7 @@ requirements:
     - pip >=18.0
     - pygments >=2.8.0
     - pyqt >=5.12,!=5.15.1
-    - pyqtgraph >=0.11.1
+    - pyqtgraph >=0.11.1,!=0.12.4
     - pyqtwebengine >=5.12
     - python
     - python-louvain >=0.13
