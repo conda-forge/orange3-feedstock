@@ -1,5 +1,5 @@
 {% set name = "Orange3" %}
-{% set version = "3.34.0" %}
+{% set version = "3.34.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/Orange3-{{ version }}.tar.gz
-  sha256: d81970d5811e9c281848f6709a7c66133e58cc0ecb9f46041609f3456122d198
+  sha256: ae80147a9f2b2b2454fa806ca41a4dbd00e6c12a71e6e8ff19fe8e01d3d12d01
 
 build:
   number: 0
@@ -61,7 +61,7 @@ requirements:
     - pyyaml
     - qtconsole >=4.7.2
     - requests
-    - scikit-learn >=1.0.1
+    - scikit-learn >=1.0.1,<1.2.0
     - scipy >=1.9
     - serverfiles
     - setuptools >=41.0.0
