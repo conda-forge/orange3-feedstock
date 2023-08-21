@@ -23,7 +23,7 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
-    - cython
+    - cython <1.0  # needed to build with current release
     - numpy
     - pip
     - setuptools
