@@ -11,7 +11,7 @@ source:
   sha256: 61728d5fe0601f0f4df20d8b456c4244ea119feccfb25ee08837edd2bab0e9a0
 
 build:
-  number: 0
+  number: 1
   entry_points:
     - orange-canvas = Orange.canvas.__main__:main
   osx_is_app: true
@@ -23,7 +23,7 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
-    - cython
+    - cython <1.0  # needed to build with current release
     - numpy
     - pip
     - setuptools
@@ -72,6 +72,7 @@ requirements:
     - xlrd >=1.2.0
     - xlsxwriter
     - {{ pin_compatible('numpy') }}
+    - filelock >=3.8.0  # remove when new canvas-core is released
 
 test:
   imports:
