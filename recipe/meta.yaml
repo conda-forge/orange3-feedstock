@@ -23,10 +23,10 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
-    - cython <1.0  # needed to build with current release
+    - cython >=3.0
     - numpy
     - pip
-    - setuptools
+    - setuptools >=51.0
     - wheel
     - python
     - recommonmark
@@ -45,12 +45,12 @@ requirements:
     - keyrings.alt
     - matplotlib-base >=3.2.0
     - networkx
-    - numpy >=1.19.5
+    - numpy >=1.20.0
     - openpyxl
     - opentsne >=0.6.1,!=0.7.0
     - orange-canvas-core >=0.1.30,<0.2a
-    - orange-widget-base >=4.20.0
-    - pandas >=1.4.0,!=1.5.0,<2  # temporary pinned because of failing tests, unpin on next release!
+    - orange-widget-base >=4.21.0
+    - pandas >=1.4.0,!=1.5.0,!=2.0.0
     - pip >=18.0
     - pygments >=2.8.0
     - pyqt >5.15.1
@@ -58,6 +58,7 @@ requirements:
     - pyqtwebengine >=5.12
     - python
     - python-louvain >=0.13
+    - pygments >=2.8.0
     - pyyaml
     - qtconsole >=4.7.2
     - requests
