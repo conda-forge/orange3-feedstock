@@ -18,7 +18,7 @@ build:
   script: {{ PYTHON }} -m pip install . -vv
   skip: true  # [py<38]
   ignore_prefix_files:
-    - Orange/widgets/data/utils/pythoneditor/tests  # tests can crash
+    - Orange/widgets/data/utils/pythoneditor/tests/**  # tests can crash
 
 requirements:
   build:
