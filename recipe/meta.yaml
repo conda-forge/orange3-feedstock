@@ -1,5 +1,5 @@
 {% set name = "Orange3" %}
-{% set version = "3.36.1" %}
+{% set version = "3.36.2" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/Orange3-{{ version }}.tar.gz
-  sha256: 8eb02530f0a3bc63567556d07db380a80496a72d05358ee15b94e8cf231c8743
+  sha256: d436bb98d33aa6ea7b6083359032c704da1a6a0e656c068ce806e2a3f319af8c
 
 build:
   number: 0
@@ -31,7 +31,6 @@ requirements:
     - python
     - recommonmark
     - sphinx >=4.2.0
-    - docutils <0.17  # docutils changed html template in 0.17
   run:
     # appnope should be in orange-widget-base
     - appnope  # [osx]
@@ -64,7 +63,7 @@ requirements:
     - python-louvain >=0.13
     - pyyaml
     - requests
-    - scikit-learn >=1.1.0,<1.2.0
+    - scikit-learn >=1.1.0,!=1.2.*,<1.4
     - scipy >=1.9
     - serverfiles
     - setuptools >=51.0.0
