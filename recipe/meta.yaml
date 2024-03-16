@@ -11,7 +11,7 @@ source:
   sha256: d436bb98d33aa6ea7b6083359032c704da1a6a0e656c068ce806e2a3f319af8c
 
 build:
-  number: 0
+  number: 1
   entry_points:
     - orange-canvas = Orange.canvas.__main__:main
   osx_is_app: true
