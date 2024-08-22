@@ -78,6 +78,7 @@ test:
     - Orange
     - Orange.canvas
   commands:
+    - pip check
     - orange-canvas --help
     - export QT_QPA_PLATFORM=offscreen  # [not win]
     # for now, only test on Windows (better have some tests than none)
