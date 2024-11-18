@@ -11,7 +11,7 @@ source:
   sha256: bc9a9e200e28e8c03027d22d6a93ee9b097c3cd0a2cc50b01eca2df03a3ee32f
 
 build:
-  number: 0
+  number: 1
   entry_points:
     - orange-canvas = Orange.canvas.__main__:main
   osx_is_app: true
@@ -72,7 +72,6 @@ requirements:
     - xgboost >=1.7.4,<2.1
     - xlrd >=1.2.0
     - xlsxwriter
-    - {{ pin_compatible('numpy') }}
 
 test:
   imports:
