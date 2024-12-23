@@ -1,5 +1,5 @@
 {% set name = "Orange3" %}
-{% set version = "3.38.0" %}
+{% set version = "3.38.1" %}
 
 
 package:
@@ -8,10 +8,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name|lower }}-{{ version }}.tar.gz
-  sha256: bc9a9e200e28e8c03027d22d6a93ee9b097c3cd0a2cc50b01eca2df03a3ee32f
+  sha256: 6c6d3fa82e01fdc16187ef027cebb91537eae5b129ba31d3bb4bbfdab5fbb4f4
 
 build:
-  number: 1
+  number: 0
   entry_points:
     - orange-canvas = Orange.canvas.__main__:main
   osx_is_app: true
@@ -37,7 +37,7 @@ requirements:
     # appnope should be in orange-widget-base
     - appnope  # [osx]
     # gui requirements
-    - orange-canvas-core >=0.2.4,<0.3a
+    - orange-canvas-core >=0.2.5,<0.3a
     - orange-widget-base >=4.25.0
     - anyqt >=0.2.0
     - matplotlib-base >=3.2.0
