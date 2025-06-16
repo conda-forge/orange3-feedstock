@@ -11,7 +11,7 @@ source:
   sha256: c0289d817af37b47fa9a9b9a470681ad02ae4900b6ceedb54442362f1e6ddf88
 
 build:
-  number: 0
+  number: 1
   entry_points:
     - orange-canvas = Orange.canvas.__main__:main
   osx_is_app: true
@@ -71,7 +71,6 @@ requirements:
     - xgboost >=1.7.4,<2.1
     - xlrd >=1.2.0
     - xlsxwriter
-    - {{ pin_compatible('numpy') }}
 
 test:
   imports:
@@ -81,8 +80,7 @@ test:
     - orange-canvas --help
     - export QT_QPA_PLATFORM=offscreen  # [not win]
     # for now, only test on Windows (better have some tests than none)
-    # Disable tests for 3.39.0 release (only some deprecation warnings are problematic
-    # - python -m unittest -v Orange.tests Orange.widgets.tests  # [win]
+    - python -m unittest -v Orange.tests Orange.widgets.tests  # [win]
   requires:
     - pip
 
