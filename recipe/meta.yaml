@@ -80,8 +80,7 @@ test:
     - orange-canvas --help
     - export QT_QPA_PLATFORM=offscreen  # [not win]
     # for now, only test on Windows (better have some tests than none)
-    # Disable tests for 3.39.0 release (only some deprecation warnings are problematic
-    # - python -m unittest -v Orange.tests Orange.widgets.tests  # [win]
+    - python -m unittest -v Orange.tests Orange.widgets.tests  # [win]
   requires:
     - pip
 
