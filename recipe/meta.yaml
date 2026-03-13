@@ -11,13 +11,13 @@ source:
   sha256: 049564ad26cbc648b6e1a8be430fd640bf35fbbc6693945672056e570f69353d
 
 build:
-  number: 0
+  number: 1
   entry_points:
     - orange-canvas = Orange.canvas.__main__:main
   osx_is_app: true
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   skip: true  # [py<=310]
-
+  
 requirements:
   build:
     - python                                 # [build_platform != target_platform]
@@ -73,7 +73,8 @@ requirements:
     - scikit-learn >=1.5.1
     - scipy >=1.9
     - serverfiles
-    - xgboost >=1.7.4,<2.1
+    - xgboost >=1.7.4,<2.1  # [osx]
+    - xgboost >=1.7.4  # [not osx]
     - xlrd >=1.2.0
     - xlsxwriter
 
