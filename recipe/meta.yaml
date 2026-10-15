@@ -11,7 +11,7 @@ source:
   sha256: 049564ad26cbc648b6e1a8be430fd640bf35fbbc6693945672056e570f69353d
 
 build:
-  number: 1
+  number: 2
   entry_points:
     - orange-canvas = Orange.canvas.__main__:main
   osx_is_app: true
@@ -48,9 +48,7 @@ requirements:
     - anyqt >=0.2.0
     - matplotlib-base >=3.2.0
     - pygments >=2.8.0
-    - pyqt >5.15.1
     - pyqtgraph >=0.13.1
-    - pyqtwebengine >=5.12
     - qtconsole >=4.7.2
     # core requirements
     - baycomp >=1.0.2
@@ -89,6 +87,8 @@ test:
     - python -m unittest -v Orange.tests Orange.widgets.tests  # [win]
   requires:
     - pip
+    - pyqt
+    - pyqtwebengine
 
 app:
   entry: orange-canvas
