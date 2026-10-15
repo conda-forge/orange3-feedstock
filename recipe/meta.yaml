@@ -87,8 +87,8 @@ test:
     - python -m unittest -v Orange.tests Orange.widgets.tests  # [win]
   requires:
     - pip
-    - pyqt6
-    - pyqt6-webengine
+    - pyqt
+    - pyqtwebengine
 
 app:
   entry: orange-canvas
