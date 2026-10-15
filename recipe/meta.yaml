@@ -51,9 +51,7 @@ requirements:
     - anyqt >=0.2.0
     - matplotlib-base >=3.2.0
     - pygments >=2.8.0
-    - pyqt >5.15.1
     - pyqtgraph >=0.13.1
-    - pyqtwebengine >=5.12
     - qtconsole >=4.7.2
     # core requirements
     - baycomp >=1.0.2
@@ -92,6 +90,8 @@ test:
     - python -m unittest -v Orange.tests Orange.widgets.tests  # [win]
   requires:
     - pip
+    - pyqt6
+    - pyqt6-webengine
 
 app:
   entry: orange-canvas
