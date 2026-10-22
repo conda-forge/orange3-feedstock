@@ -70,7 +70,8 @@ requirements:
     - python-louvain >=0.13
     - pyyaml
     - requests
-    - scikit-learn >=1.5.1
+    # TODO: Remove <1.9 pin on 3.41 release
+    - scikit-learn >=1.5.1,<1.9
     - scipy >=1.9
     - serverfiles
     - xgboost >=1.7.4
