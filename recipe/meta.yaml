@@ -9,9 +9,12 @@ package:
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name|lower }}-{{ version }}.tar.gz
   sha256: 049564ad26cbc648b6e1a8be430fd640bf35fbbc6693945672056e570f69353d
+  # TODO: Remove this patch in 3.41.0
+  patches:
+    - 0001-XGB-Generalize-test.patch
 
 build:
-  number: 1
+  number: 2
   entry_points:
     - orange-canvas = Orange.canvas.__main__:main
   osx_is_app: true
@@ -70,11 +73,11 @@ requirements:
     - python-louvain >=0.13
     - pyyaml
     - requests
-    - scikit-learn >=1.5.1
+    # TODO: Remove <1.9 pin on 3.41 release
+    - scikit-learn >=1.5.1,<1.9
     - scipy >=1.9
     - serverfiles
-    - xgboost >=1.7.4,<2.1  # [osx]
-    - xgboost >=1.7.4  # [not osx]
+    - xgboost >=1.7.4
     - xlrd >=1.2.0
     - xlsxwriter
 
