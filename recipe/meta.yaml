@@ -14,7 +14,7 @@ source:
     - 0001-XGB-Generalize-test.patch
 
 build:
-  number: 2
+  number: 3
   entry_points:
     - orange-canvas = Orange.canvas.__main__:main
   osx_is_app: true
