@@ -1,5 +1,5 @@
 {% set name = "Orange3" %}
-{% set version = "3.40.0" %}
+{% set version = "3.41.0" %}
 
 
 package:
@@ -7,20 +7,20 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name|lower }}-{{ version }}.tar.gz
-  sha256: 049564ad26cbc648b6e1a8be430fd640bf35fbbc6693945672056e570f69353d
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name|lower }}-{{ version }}.tar.gz
+  sha256: be28280acce4863b84658aa73a5af3c3a89cc6a1bc15d78e7325fe3b3aa7dd8b
   # TODO: Remove this patch in 3.41.0
   patches:
     - 0001-XGB-Generalize-test.patch
 
 build:
-  number: 3
+  number: 0
   entry_points:
     - orange-canvas = Orange.canvas.__main__:main
   osx_is_app: true
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   skip: true  # [py<=310]
-  
+
 requirements:
   build:
     - python                                 # [build_platform != target_platform]
